@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ร้านธรรมวัฒนา มหาดี จำหน่ายเครื่องสังฆภัณฑ์และอุปกรณ์สำหรับงานบุญ">
+  <title>ธรรมวัฒนา มหาดี | Thammawattana Mahadee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- แถบหัวเว็บไซต์ -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="หน้าหลัก">
+      <img src="assets/home.png" alt="สัญลักษณ์ร้านธรรมวัฒนา มหาดี">
+      <span><strong data-i18n="brand">ธรรมวัฒนา มหาดี</strong><small>THAMMAWATTANA MAHADEE</small></span>
+    </a>
+    <!-- ปุ่มเมนูสำหรับมือถือ -->
+    <button class="menu-toggle" id="menuToggle" aria-label="เปิดเมนู" aria-expanded="false">☰</button>
+
+    <!-- เมนูหลักและเมนูย่อยแบบ Pull-down -->
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" data-i18n="navHome">หน้าแรก</a>
+      <a href="#about" data-i18n="navAbout">เกี่ยวกับเรา</a>
+      <div class="dropdown">
+        <a href="#products" class="drop-trigger" data-i18n="navProducts">สินค้าและบริการ ▾</a>
+        <div class="dropdown-menu">
+          <a href="#products" data-category="offering" data-i18n="catOffering">ชุดสังฆทาน</a>
+          <a href="#products" data-category="robe" data-i18n="catRobe">จีวรและเครื่องนุ่งห่มพระ</a>
+          <a href="#products" data-category="bowl" data-i18n="catBowl">บาตรพระ</a>
+          <a href="#products" data-category="incense" data-i18n="catIncense">ธูปและเทียน</a>
+          <a href="#products" data-category="ceremony" data-i18n="catCeremony">อุปกรณ์พิธีกรรม</a>
+        </div>
+      </div>
+      <a href="#news" data-i18n="navNews">ข่าวสาร</a>
+      <a href="#videos" data-i18n="navVideos">วิดีโอ</a>
+      <a href="#contact" data-i18n="navContact">ติดต่อเรา</a>
+      <a href="#credits" data-i18n="navCredits">เครดิต</a>
+      <button class="language-switch" id="languageSwitch" aria-label="เปลี่ยนภาษา">EN</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- หน้าแรก -->
+    <section class="page active" id="home">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="heroEyebrow">ศรัทธา • ความตั้งใจ • ความใส่ใจ</p>
+          <h1 data-i18n="heroTitle">ธรรมวัฒนา มหาดี</h1>
+          <p class="hero-subtitle" data-i18n="heroText">คัดสรรเครื่องสังฆภัณฑ์และของใช้สำหรับงานบุญ ด้วยความใส่ใจในทุกรายละเอียด</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#products" data-i18n="shopNow">เลือกชมสินค้า</a>
+            <a class="button button-outline" href="#contact" data-i18n="contactShop">ติดต่อร้าน</a>
+          </div>
+        </div>
+        <div class="hero-mark"><img src="assets/home.png" alt="สัญลักษณ์ร้าน"></div>
+      </section>
+
+      <section class="section intro-section">
+        <p class="eyebrow" data-i18n="welcomeEyebrow">WELCOME</p>
+        <h2 data-i18n="welcomeTitle">ยินดีต้อนรับสู่ร้านธรรมวัฒนา มหาดี</h2>
+        <p class="section-lead" data-i18n="welcomeText">ร้านจำหน่ายเครื่องสังฆภัณฑ์และอุปกรณ์สำหรับประกอบกิจกรรมทางพระพุทธศาสนา เรามุ่งเน้นการบริการที่สุภาพและข้อมูลสินค้าที่ชัดเจน</p>
+      </section>
+
+      <section class="section soft-section">
+        <div class="section-heading">
+          <div><p class="eyebrow" data-i18n="categoryEyebrow">SHOP BY CATEGORY</p><h2 data-i18n="categoryTitle">หมวดหมู่สินค้า</h2></div>
+          <a class="text-link" href="#products" data-i18n="viewAll">ดูสินค้าทั้งหมด →</a>
+        </div>
+        <div class="category-grid">
+          <a class="category-card" href="#products" data-category="offering"><span class="category-number">01</span><h3 data-i18n="catOffering">ชุดสังฆทาน</h3><p data-i18n="catDesc1">ชุดถวายพระและของใช้จำเป็น</p></a>
+          <a class="category-card" href="#products" data-category="robe"><span class="category-number">02</span><h3 data-i18n="catRobe">จีวรและเครื่องนุ่งห่มพระ</h3><p data-i18n="catDesc2">เครื่องนุ่งห่มและของใช้สำหรับพระสงฆ์</p></a>
+          <a class="category-card" href="#products" data-category="bowl"><span class="category-number">03</span><h3 data-i18n="catBowl">บาตรพระ</h3><p data-i18n="catDesc3">อุปกรณ์สำหรับกิจของสงฆ์</p></a>
+          <a class="category-card" href="#products" data-category="incense"><span class="category-number">04</span><h3 data-i18n="catIncense">ธูปและเทียน</h3><p data-i18n="catDesc4">เครื่องสักการะและเครื่องหอม</p></a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div><p class="eyebrow" data-i18n="featuredEyebrow">OUR SELECTION</p><h2 data-i18n="featuredTitle">สินค้าแนะนำ</h2></div>
+          <a class="text-link" href="#products" data-i18n="viewAll">ดูสินค้าทั้งหมด →</a>
+        </div>
+        <div class="product-grid" id="featuredProducts"></div>
+      </section>
+
+      <section class="benefits">
+        <div><span>01</span><h3 data-i18n="benefit1Title">คัดสรรด้วยความใส่ใจ</h3><p data-i18n="benefit1Text">ให้ความสำคัญกับรายละเอียดและประโยชน์ใช้สอยของสินค้า</p></div>
+        <div><span>02</span><h3 data-i18n="benefit2Title">ข้อมูลชัดเจน</h3><p data-i18n="benefit2Text">สอบถามรายละเอียดสินค้าและราคาได้ก่อนตัดสินใจ</p></div>
+        <div><span>03</span><h3 data-i18n="benefit3Title">พร้อมให้บริการ</h3><p data-i18n="benefit3Text">ยินดีให้คำแนะนำเกี่ยวกับสินค้าและการจัดชุดถวาย</p></div>
+      </section>
+
+      <section class="section news-preview">
+        <div class="section-heading"><div><p class="eyebrow" data-i18n="latestEyebrow">LATEST UPDATE</p><h2 data-i18n="latestTitle">ข่าวสารจากทางร้าน</h2></div><a class="text-link" href="#news" data-i18n="readNews">อ่านข่าวทั้งหมด →</a></div>
+        <div class="news-grid" id="homeNews"></div>
+      </section>
+    </section>
+
+    <!-- เกี่ยวกับร้าน -->
+    <section class="page section inner-page" id="about">
+      <p class="eyebrow" data-i18n="aboutEyebrow">OUR STORY</p>
+      <h1 data-i18n="aboutTitle">เกี่ยวกับร้านธรรมวัฒนา มหาดี</h1>
+      <p class="section-lead" data-i18n="aboutLead">มุ่งมั่นให้การเลือกซื้อเครื่องสังฆภัณฑ์เป็นเรื่องสะดวก เข้าใจง่าย และเหมาะสมกับความต้องการ</p>
+      <div class="about-layout">
+        <div class="about-symbol"><img src="assets/home.png" alt="สัญลักษณ์ร้านธรรมวัฒนา มหาดี"></div>
+        <div>
+          <h2 data-i18n="historyTitle">ประวัติและแนวคิด</h2>
+          <p data-i18n="historyText">ร้านธรรมวัฒนา มหาดี จัดทำเว็บไซต์นี้เพื่อเป็นช่องทางแนะนำสินค้าเครื่องสังฆภัณฑ์ ข่าวสาร และข้อมูลการติดต่อ ลูกค้าสามารถเลือกชมหมวดหมู่สินค้าและสอบถามรายละเอียดเพิ่มเติมกับทางร้านได้</p>
+          <h2 data-i18n="visionTitle">วิสัยทัศน์</h2>
+          <p data-i18n="visionText">ให้บริการด้วยความซื่อสัตย์ ใส่ใจคุณภาพ และอำนวยความสะดวกแก่ผู้ที่ต้องการเลือกซื้อสิ่งของสำหรับการทำบุญ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- หน้าสินค้า -->
+    <section class="page section inner-page" id="products">
+      <p class="eyebrow" data-i18n="productsEyebrow">PRODUCTS & SERVICES</p>
+      <h1 data-i18n="productsTitle">สินค้าและบริการ</h1>
+      <p class="section-lead" data-i18n="productsLead">เลือกชมหมวดหมู่สินค้า หรือค้นหาสิ่งที่ต้องการได้จากด้านล่าง</p>
+      <div class="product-tools">
+        <input id="productSearch" type="search" placeholder="ค้นหาสินค้า..." data-i18n-placeholder="searchPlaceholder">
+        <select id="categoryFilter" aria-label="กรองหมวดหมู่">
+          <option value="all" data-i18n="allCategories">ทุกหมวดหมู่</option>
+          <option value="offering" data-i18n="catOffering">ชุดสังฆทาน</option>
+          <option value="robe" data-i18n="catRobe">จีวรและเครื่องนุ่งห่มพระ</option>
+          <option value="bowl" data-i18n="catBowl">บาตรพระ</option>
+          <option value="incense" data-i18n="catIncense">ธูปและเทียน</option>
+          <option value="ceremony" data-i18n="catCeremony">อุปกรณ์พิธีกรรม</option>
+        </select>
+      </div>
+      <div class="product-grid" id="allProducts"></div>
+     
+    </section>
+
+    <!-- หน้าข่าวสาร -->
+    <section class="page section inner-page" id="news">
+      <p class="eyebrow" data-i18n="newsEyebrow">NEWS & UPDATES</p>
+      <h1 data-i18n="newsTitle">ข่าวสารและประชาสัมพันธ์</h1>
+      <p class="section-lead" data-i18n="newsLead">สาระน่ารู้และข่าวประชาสัมพันธ์จากร้านธรรมวัฒนา มหาดี</p>
+      <div class="news-grid news-grid-large" id="allNews"></div>
+      <article class="news-detail hidden" id="newsDetail"></article>
+    </section>
+
+    <!-- หน้าวิดีโอ -->
+    <section class="page section inner-page" id="videos">
+      <p class="eyebrow" data-i18n="videoEyebrow">VIDEO PRESENTATION</p>
+      <h1 data-i18n="videoTitle">วิดีโอแนะนำร้าน</h1>
+      <p class="section-lead" data-i18n="videoLead">พื้นที่สำหรับแนะนำร้าน สินค้า และบรรยากาศภายในร้าน</p>
+      <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4" title="วิดีโอแนะนำร้าน" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    </section>
+
+    <!-- หน้าติดต่อ -->
+    <section class="page section inner-page" id="contact">
+      <p class="eyebrow" data-i18n="contactEyebrow">GET IN TOUCH</p>
+      <h1 data-i18n="contactTitle">ติดต่อร้านธรรมวัฒนา มหาดี</h1>
+      <p class="section-lead" data-i18n="contactLead">สอบถามสินค้า รายละเอียด หรือข้อมูลเพิ่มเติมได้ผ่านช่องทางด้านล่าง</p>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h2 data-i18n="shopInformation">ข้อมูลร้านค้า</h2>
+          <p><strong data-i18n="addressLabel">ที่อยู่:</strong> <span data-i18n="sampleAddress">237 ถ. จอมพล ตำบลในเมือง อำเภอเมืองนครราชสีมา นครราชสีมา 30000</span></p>
+          <p><strong data-i18n="phoneLabel">โทรศัพท์:</strong> 044-241-480</p>
+          <p><strong data-i18n="hoursLabel">เวลาเปิด-ปิด:</strong> <span data-i18n="sampleHours">09:00-17:00</span></p>
+          <h2 data-i18n="socialTitle">ติดตามร้าน</h2>
+          <div class="social-links">
+            <a href="https://www.facebook.com/mahadeekorat/?locale=th_TH" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://line.me/" target="_blank" rel="noopener">LINE</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <h2 data-i18n="sendMessage">ส่งข้อความถึงร้าน</h2>
+          <label for="customerName" data-i18n="yourName">ชื่อของคุณ</label>
+          <input id="customerName" required placeholder="ชื่อ">
+          <label for="customerEmail" data-i18n="yourEmail">อีเมล</label>
+          <input id="customerEmail" type="email" required placeholder="name@example.com">
+          <label for="customerMessage" data-i18n="yourMessage">ข้อความ</label>
+          <textarea id="customerMessage" rows="5" required></textarea>
+          <button class="button button-gold" type="submit" data-i18n="sendButton">ส่งข้อความ</button>
+          <p class="form-result" id="formResult" role="status"></p>
+        </form>
+      </div>
+      <div class="map-wrap">
+        <div class="section-heading"><h2 data-i18n="mapTitle">แผนที่ร้าน</h2><a class="text-link" href="https://www.google.com/maps" target="_blank" rel="noopener" data-i18n="directions">เปิด Google Maps →</a></div>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3854.318938566029!2d102.10059047511375!3d14.974990385557108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31194d000aa63a57%3A0xbe195f23ba1c118e!2z4Lij4LmJ4Liy4LiZ4LiY4Lij4Lij4Lih4Lin4Lix4LiS4LiZ4LiyKOC4oeC4q-C4suC4lOC4tSk!5e0!3m2!1sth!2sth!4v1794290484815!5m2!1sth!2sth" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </section>
+
+    <!-- หน้าเครดิต -->
+    <section class="page section inner-page" id="credits">
+      <p class="eyebrow" data-i18n="creditsEyebrow">WEBSITE CREDITS</p>
+      <h1 data-i18n="creditsTitle">เครดิตผู้พัฒนาเว็บไซต์</h1>
+      <div class="credits-card">
+        <img src="assets/pe.png" alt="สัญลักษณ์เว็บไซต์">
+        <h2 data-i18n="developerName">ผู้พัฒนาเว็บไซต์: B6927165</h2>
+        <p data-i18n="developerRole">บทบาท: นักพัฒนาเว็บไซต์</p>
+        <p>HTML · CSS · JavaScript</p>
+        <p data-i18n="developedYear">@: 2026</p>
+      </div>
+    </section>
+
+    <!-- Popup-->
+    <div id="productModal" class="product-modal">
+    <div class="product-modal-content">
+
+        <button class="modal-close" onclick="closeProductModal()">
+            &times;
+        </button>
+
+        <div class="modal-body">
+
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="Product">
+            </div>
+
+            <div class="modal-info">
+                <span id="modalCategory"></span>
+
+                <h2 id="modalName"></h2>
+
+                <p id="modalDescription"></p>
+
+                <h3 id="modalPrice"></h3>
+
+                <button class="contact-btn" id="modelQuest" data-i18n="ask">
+                    ติดต่อสอบถาม
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+  </main>
+
+  <!-- ส่วนท้ายเว็บไซต์ -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand"><strong data-i18n="brand">ธรรมวัฒนา มหาดี</strong><p data-i18n="footerText">เครื่องสังฆภัณฑ์และอุปกรณ์สำหรับงานบุญ พร้อมให้บริการด้วยความใส่ใจ</p></div>
+      <div><h3 data-i18n="quickLinks">เมนูลัด</h3><a href="#home" data-i18n="navHome">หน้าแรก</a><a href="#about" data-i18n="navAbout">เกี่ยวกับเรา</a><a href="#products" data-i18n="navProducts">สินค้าและบริการ</a><a href="#contact" data-i18n="navContact">ติดต่อเรา</a></div>
+      <div><h3 data-i18n="contactUs">ติดต่อ</h3><p>โทร. 044-241-480</p><p data-i18n="sampleAddress">237 ถ. จอมพล ตำบลในเมือง อำเภอเมืองนครราชสีมา นครราชสีมา 30000</p><a href="#credits" data-i18n="navCredits">เครดิตผู้พัฒนา</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Thammawattana Mahadee</span><span data-i18n="rights">สงวนลิขสิทธิ์</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
