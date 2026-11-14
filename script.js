@@ -39,7 +39,7 @@ const translations = {
   }
 };
 
-// ข้อมูลสินค้า: แก้ชื่อ รายละเอียด และราคาได้จากตรงนี้
+// Data :: Edit Data here!!!!
 const products = [
   {id:1, category:"offering", name:{th:"ชุดสังฆทาน",en:"Monk Offering Set"}, desc:{th:"ชุดสิ่งของสำหรับถวายพระสงฆ์",en:"A collection of items for offering to monks."}, price:"9", featured:true},
   {id:2, category:"robe", name:{th:"จีวรพระ",en:"Monk Robe"}, desc:{th:"เครื่องนุ่งห่มสำหรับพระสงฆ์",en:"Traditional clothing for Buddhist monks."}, price:"9 ", featured:true},
@@ -51,7 +51,7 @@ const products = [
   {id:8, category:"ceremony", name:{th:"อุปกรณ์ทำบุญ",en:"Merit-Making Supplies"}, desc:{th:"อุปกรณ์สำหรับกิจกรรมทำบุญ",en:"Items for merit-making activities."}, price:"9 ", featured:false}
 ];
 
-// ข้อมูลข่าวตัวอย่าง
+// NEws Add or edit here
 const news = [
   {id:1, date:"2026-11-01", title:{th:"แนวทางเลือกชุดสังฆทาน",en:"How to Choose an Offering Set"}, text:{th:"เลือกสิ่งของที่จำเป็น มีคุณภาพ และเหมาะสมกับการใช้งานของพระสงฆ์",en:"Choose useful, good-quality items that suit the needs of monks."}},
   {id:2, date:"2026-10-20", title:{th:"เตรียมสิ่งของสำหรับวันทำบุญ",en:"Preparing for a Merit-Making Day"}, text:{th:"วางแผนรายการสิ่งของล่วงหน้าเพื่อให้การจัดเตรียมเป็นไปอย่างเรียบร้อย",en:"Plan your list of items in advance for a smooth preparation."}},
@@ -60,14 +60,14 @@ const news = [
 
 let currentLanguage = "th";
 
-// สร้างการ์ดสินค้าโดยใช้รูปที่เจ้าของเว็บไซต์แนบมาเป็นภาพแทน
+// Creat Card function
 function productCard(product) {
 
-    // ดึงข้อมูลตามภาษาปัจจุบัน
+    // get Language
     const name = product.name[currentLanguage];
     const desc = product.desc[currentLanguage];
 
-    // แปลงข้อความราคา
+    
     const priceText = product.price === "สอบถามราคา"
         ? (currentLanguage === "th" ? "สอบถามราคา" : "Please Contact Us")
         : (currentLanguage === "th"
@@ -110,13 +110,13 @@ function productCard(product) {
     </article>`;
 }
 
-// แสดงสินค้าแนะนำและสินค้าทั้งหมด
+// Show all Shop
 function renderProducts() {
   document.getElementById("featuredProducts").innerHTML = products.filter(p => p.featured).map(productCard).join("");
   filterProducts();
 }
 
-// ค้นหาและกรองสินค้าตามหมวดหมู่
+// filter products!!
 function filterProducts() {
   const search = document.getElementById("productSearch").value.toLowerCase();
   const category = document.getElementById("categoryFilter").value;
@@ -129,7 +129,7 @@ function filterProducts() {
     : `<p>${currentLanguage === "th" ? "ไม่พบสินค้าที่ค้นหา" : "No products found."}</p>`;
 }
 
-// ปุ่มดูรายละเอียดและสอบถามสินค้า
+// Ask shop button
 
 function askAboutProduct(name) {
   location.hash = "contact";
@@ -138,7 +138,7 @@ function askAboutProduct(name) {
 
 
 
-// สร้างการ์ดข่าวและเปิดรายละเอียดข่าว
+// Create  news card and detail Newxss
 function newsCard(item) {
   return `<article class="news-card"><img src="assets/placeholder.png" alt="">
     <div><small>${item.date}</small><h3>${item.title[currentLanguage]}</h3>
@@ -158,7 +158,7 @@ function openNews(id) {
 }
 function closeNews() { document.getElementById("newsDetail").classList.add("hidden"); }
 
-// เปลี่ยนข้อความทั้งหมดตามภาษาที่เลือก
+// chage language for seclcion
 function setLanguage(language) {
   currentLanguage = language;
   document.documentElement.lang = language;
@@ -176,7 +176,7 @@ function setLanguage(language) {
   closeNews();
 }
 
-// เปลี่ยนหน้าโดยใช้ hash เช่น #about หรือ #products
+// Change Page  Ex #about  #products
 function showPage() {
   const pageId = location.hash.replace("#", "") || "home";
   document.querySelectorAll(".page").forEach(page => page.classList.toggle("active", page.id === pageId));
@@ -185,20 +185,20 @@ function showPage() {
   window.scrollTo({top:0, behavior:"smooth"});
 }
 
-// เปิด Popup รายละเอียดสินค้า
+//  Popup Detial Shop
 function showProductInfo(productId) {
 
-    // ค้นหาสินค้าจาก ID
+    //  ID
     const product = products.find(
         item => item.id === Number(productId)
     );
 
     if (!product) return;
 
-    // ใช้ภาษาปัจจุบันของเว็บไซต์
+    
     const lang = currentLanguage;
 
-    // แสดงข้อมูลสินค้า
+    // Shiw Data
     document.getElementById("modalName").textContent =
         product.name[lang];
 
@@ -213,11 +213,11 @@ function showProductInfo(productId) {
     document.getElementById("modalCategory").textContent =
         product.category;
 
-    // แสดงรูปสินค้า
+    // Imges
     document.getElementById("modalImage").src =
         `images/products/${product.id}.jpg`;
 
-    // เปิด Popup
+    // open Popup
 
       document.getElementById("modelQuest").addEventListener("click", () => {
       closeProductModal()
@@ -229,7 +229,7 @@ function showProductInfo(productId) {
 }
 
 
-// ปิด Popup
+// Close Popup
 function closeProductModal() {
 
     document.getElementById("productModal").style.display = "none";
@@ -238,7 +238,7 @@ function closeProductModal() {
 
 
 
-// คลิกพื้นที่ด้านนอกเพื่อปิด
+// Click anywhere for chose Popup
 document.getElementById("productModal").addEventListener("click", function(e) {
 
     if (e.target === this) {
@@ -247,7 +247,7 @@ document.getElementById("productModal").addEventListener("click", function(e) {
 
 });
 
-// คลิกเมนูหมวดหมู่แล้วตั้งค่าตัวกรองให้ตรงกัน
+// set filters 
 document.querySelectorAll("[data-category]").forEach(link => {
   link.addEventListener("click", () => {
     document.getElementById("categoryFilter").value = link.dataset.category;
@@ -255,30 +255,29 @@ document.querySelectorAll("[data-category]").forEach(link => {
   });
 });
 
-// ปุ่มเปลี่ยนภาษา
+// change language button
 document.getElementById("languageSwitch").addEventListener("click", () => {
   setLanguage(currentLanguage === "th" ? "en" : "th");
 });
 
-// เปิด/ปิดเมนูบนมือถือ
+// open//clise miobliee
 document.getElementById("menuToggle").addEventListener("click", () => {
   const nav = document.getElementById("mainNav");
   nav.classList.toggle("open");
   document.getElementById("menuToggle").setAttribute("aria-expanded", nav.classList.contains("open"));
 });
 
-// ช่องค้นหาและตัวกรอง
+// Search bar and filters
 document.getElementById("productSearch").addEventListener("input", filterProducts);
 document.getElementById("categoryFilter").addEventListener("change", filterProducts);
 
-// ฟอร์มติดต่อ: ตัวอย่างนี้ยังไม่ส่งข้อมูลไปยังเซิร์ฟเวอร์
+// From
 document.getElementById("contactForm").addEventListener("submit", event => {
   event.preventDefault();
   document.getElementById("formResult").textContent = translations[currentLanguage].messageSent;
   event.target.reset();
 });
 
-// เริ่มต้นเว็บไซต์
 window.addEventListener("hashchange", showPage);
 renderProducts();
 renderNews();
